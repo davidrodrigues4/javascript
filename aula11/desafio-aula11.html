@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Qual país você mora?</h1>
+    <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Enviar" onclick="identificar()">
+    <div id="print"></div>
+    <div id="res"></div>
+
+    <script>
+        function identificar() {
+            var p = document.getElementById('txtp')
+            var res = document.getElementById('res')
+            var p = (p.value)
+            var print = document.getElementById('print')
+            print.innerHTML = `<p>Vivendo em ${p}</p>`
+
+            if (p == 'Brasil') {
+                res.innerHTML = 'Você é brasileiro!'
+            }
+
+            else {
+                res.innerHTML = 'Você é estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>
